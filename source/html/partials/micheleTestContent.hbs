@@ -1,0 +1,12 @@
+{{#if testPageContent}}
+  {{#with testPageContent}}
+    {{#if title}} <h1>{{title}}</h1> {{/if}}
+    {{#each item}}
+      <div class="box">
+        {{#if title}} <h2>{{title}}</h2> {{/if}}
+        {{#if contents}} <p>{{contents}}</p> {{/if}}
+        {{#if image}} <img src="{{image}}"> {{/if}}
+      </div>
+    {{/each}}
+  {{/with}}
+{{/if }}

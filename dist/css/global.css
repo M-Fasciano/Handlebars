@@ -1,0 +1,1027 @@
+
+/* line 11 : D:\Projects\HandlebarsTesting\source\css\core.styl */
+
+/* line 1 : D:\Projects\HandlebarsTesting\node_modules\stylus\lib\functions\index.styl */
+
+/* line 1 : D:\Projects\HandlebarsTesting\source\css\core.styl */
+/**
+ * Setup
+ */
+
+/* line 5 : D:\Projects\HandlebarsTesting\source\css\core.styl */
+@charset "UTF-8";
+
+/* line 286 : D:\Projects\HandlebarsTesting\node_modules\stylus\lib\functions\index.styl */
+
+/* line 1 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/* normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+
+/* line 8 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* line 18 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+body {
+  margin: 0;
+}
+
+/* line 31 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+/* 1 */
+  display: block;
+}
+
+/* line 50 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+/* line 61 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 70 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+progress {
+  vertical-align: baseline;
+}
+
+/* line 79 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+template,
+[hidden] {
+  display: none;
+}
+
+/* line 92 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+a {
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}
+
+/* line 102 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/* line 115 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/* line 125 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/* line 134 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/* line 143 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+dfn {
+  font-style: italic;
+}
+
+/* line 152 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 161 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/* line 170 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+small {
+  font-size: 80%;
+}
+
+/* line 179 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 187 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 191 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+sup {
+  top: -0.5em;
+}
+
+/* line 202 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+img {
+  border-style: none;
+}
+
+/* line 210 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 222 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* line 234 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+figure {
+  margin: 1em 40px;
+}
+
+/* line 243 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/* line 257 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+button,
+input,
+select,
+textarea {
+  font: inherit; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/* line 269 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+optgroup {
+  font-weight: bold;
+}
+
+/* line 278 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+button,
+input {
+/* 1 */
+  overflow: visible;
+}
+
+/* line 288 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+button,
+select {
+/* 1 */
+  text-transform: none;
+}
+
+/* line 299 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+}
+
+/* line 310 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* line 322 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/* line 333 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 346 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/* line 359 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+textarea {
+  overflow: auto;
+}
+
+/* line 368 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/* line 378 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* line 388 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/* line 397 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 406 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/* line 416 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* line 419 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+
+/* line 1 : D:\Projects\HandlebarsTesting\source\css\imports\variables.styl */
+
+/* line 11 : D:\Projects\HandlebarsTesting\source\css\imports\variables.styl */
+
+/* line 11 : D:\Projects\HandlebarsTesting\source\css\imports\base.styl */
+
+/* line 1 : D:\Projects\HandlebarsTesting\source\css\imports\base.styl */
+html,
+body {
+  height: 100%;
+}
+
+/* line 5 : D:\Projects\HandlebarsTesting\source\css\imports\base.styl */
+html {
+  background-color: #ffdf01;
+  color: #3f4142;
+}
+
+/* line 8 : D:\Projects\HandlebarsTesting\source\css\imports\base.styl */
+html a {
+  color: #3f4142;
+  text-decoration: underline;
+}
+
+/* line 11 : D:\Projects\HandlebarsTesting\source\css\imports\base.styl */
+html a:hover {
+  text-decoration: none;
+}
+
+/* line 14 : D:\Projects\HandlebarsTesting\source\css\imports\base.styl */
+.container {
+  height: 100%;
+  padding: 20px;
+}
+
+/* line 18 : D:\Projects\HandlebarsTesting\source\css\imports\base.styl */
+.box {
+  float: left;
+}
+
+/* line 20 : D:\Projects\HandlebarsTesting\source\css\imports\base.styl */
+
+/* line 1 : D:\Projects\HandlebarsTesting\source\css\mixins.styl */
+
+/* line 40 : D:\Projects\HandlebarsTesting\source\css\mixins.styl */
+
+/* line 1 : D:\Projects\HandlebarsTesting\source\css\imports\_header.styl */
+
+/* line 3 : D:\Projects\HandlebarsTesting\source\css\imports\_header.styl */
+.header {
+  background-color: #500;
+}
+
+/* line 5 : D:\Projects\HandlebarsTesting\source\css\imports\_header.styl */
+.header a {
+  background-color: #f00;
+  display: inline-block;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 36;
+  line-height: 2.25rem;
+  padding: 20px 45px;
+  text-decoration: none;
+}
+
+/* line 11 : D:\Projects\HandlebarsTesting\source\css\imports\_header.styl */
+.header a:hover {
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* line 15 : D:\Projects\HandlebarsTesting\source\css\imports\_header.styl */
+
+/* line 16 : D:\Projects\HandlebarsTesting\source\css\imports\_header.styl */
+.header .nav {
+  float: right;
+}
+
+/* line 18 : D:\Projects\HandlebarsTesting\source\css\imports\_header.styl */
+.header .nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 21 : D:\Projects\HandlebarsTesting\source\css\imports\_header.styl */
+.header .nav ul li {
+  display: inline;
+  float: left;
+  list-style: none;
+}
+
+/* line 25 : D:\Projects\HandlebarsTesting\source\css\imports\_header.styl */
+.header .nav ul li a {
+  border-left: 1px solid #500;
+}
+
+
+/* line 286 : D:\Projects\HandlebarsTesting\source\css\imports\_footer.styl */
+
+/* line 1 : D:\Projects\HandlebarsTesting\node_modules\stylus\lib\functions\index.styl */
+
+/* line 1 : D:\Projects\HandlebarsTesting\source\css\imports\_footer.styl */
+/* *** Footer *** */
+
+/* line 3 : D:\Projects\HandlebarsTesting\source\css\imports\_footer.styl */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+
+/* line 286 : D:\Projects\HandlebarsTesting\source\css\imports\_header.styl */
+
+/* line 1 : D:\Projects\HandlebarsTesting\node_modules\stylus\lib\functions\index.styl */
+
+/* line 1 : D:\Projects\HandlebarsTesting\source\css\imports\_header.styl */
+/* *** Header *** */
+
+/* line 3 : D:\Projects\HandlebarsTesting\source\css\imports\_header.styl */
+.header {
+  background-color: $dark-red;
+}
+
+/* line 5 : D:\Projects\HandlebarsTesting\source\css\imports\_header.styl */
+.header a {
+  background-color: $red;
+  display: inline-block;
+  padding: 20px 45px;
+  text-decoration: none;
+}
+
+/* line 11 : D:\Projects\HandlebarsTesting\source\css\imports\_header.styl */
+.header a:hover {
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* line 15 : D:\Projects\HandlebarsTesting\source\css\imports\_header.styl */
+
+/* line 16 : D:\Projects\HandlebarsTesting\source\css\imports\_header.styl */
+.header .nav {
+  float: right;
+}
+
+/* line 18 : D:\Projects\HandlebarsTesting\source\css\imports\_header.styl */
+.header .nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 21 : D:\Projects\HandlebarsTesting\source\css\imports\_header.styl */
+.header .nav ul li {
+  display: inline;
+  float: left;
+  list-style: none;
+}
+
+/* line 25 : D:\Projects\HandlebarsTesting\source\css\imports\_header.styl */
+.header .nav ul li a {
+  border-left: 1px solid $dark-red;
+}
+
+
+/* line 286 : D:\Projects\HandlebarsTesting\source\css\imports\base.styl */
+
+/* line 1 : D:\Projects\HandlebarsTesting\node_modules\stylus\lib\functions\index.styl */
+
+/* line 1 : D:\Projects\HandlebarsTesting\source\css\imports\base.styl */
+html,
+body {
+  height: 100%;
+}
+
+/* line 5 : D:\Projects\HandlebarsTesting\source\css\imports\base.styl */
+html {
+  background-color: $aq-yellow;
+  color: $aq-grey;
+}
+
+/* line 8 : D:\Projects\HandlebarsTesting\source\css\imports\base.styl */
+html a {
+  color: $aq-grey;
+  text-decoration: underline;
+}
+
+/* line 11 : D:\Projects\HandlebarsTesting\source\css\imports\base.styl */
+html a:hover {
+  text-decoration: none;
+}
+
+/* line 14 : D:\Projects\HandlebarsTesting\source\css\imports\base.styl */
+.container {
+  height: 100%;
+  padding: 20px;
+}
+
+/* line 18 : D:\Projects\HandlebarsTesting\source\css\imports\base.styl */
+.box {
+  float: left;
+}
+
+
+/* line 286 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+
+/* line 1 : D:\Projects\HandlebarsTesting\node_modules\stylus\lib\functions\index.styl */
+
+/* line 1 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/* normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+
+/* line 3 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+
+/* line 8 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* line 14 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+
+/* line 18 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+body {
+  margin: 0;
+}
+
+/* line 22 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/* HTML5 display definitions
+   ========================================================================== */
+
+/* line 25 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
+ */
+
+/* line 31 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+/* 1 */
+  display: block;
+}
+
+/* line 46 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Add the correct display in IE 9-.
+ */
+
+/* line 50 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+/* line 57 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+/* line 61 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 66 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+/* line 70 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+progress {
+  vertical-align: baseline;
+}
+
+/* line 74 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+
+/* line 79 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+template,
+[hidden] {
+  display: none;
+}
+
+/* line 84 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/* Links
+   ========================================================================== */
+
+/* line 87 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+/* line 92 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+a {
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}
+
+/* line 97 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+
+/* line 102 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/* line 107 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/* Text-level semantics
+   ========================================================================== */
+
+/* line 110 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+/* line 115 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/* line 121 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+
+/* line 125 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/* line 130 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+/* line 134 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/* line 139 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+
+/* line 143 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+dfn {
+  font-style: italic;
+}
+
+/* line 147 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+/* line 152 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 157 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Add the correct background and color in IE 9-.
+ */
+
+/* line 161 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/* line 166 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Add the correct font size in all browsers.
+ */
+
+/* line 170 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+small {
+  font-size: 80%;
+}
+
+/* line 174 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+/* line 179 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 187 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 191 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+sup {
+  top: -0.5em;
+}
+
+/* line 195 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/* Embedded content
+   ========================================================================== */
+
+/* line 198 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+
+/* line 202 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+img {
+  border-style: none;
+}
+
+/* line 206 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Hide the overflow in IE.
+ */
+
+/* line 210 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 214 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/* Grouping content
+   ========================================================================== */
+
+/* line 217 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+/* line 222 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* line 230 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Add the correct margin in IE 8.
+ */
+
+/* line 234 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+figure {
+  margin: 1em 40px;
+}
+
+/* line 238 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+/* line 243 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/* line 249 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/* Forms
+   ========================================================================== */
+
+/* line 252 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+/* line 257 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+button,
+input,
+select,
+textarea {
+  font: inherit; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/* line 265 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+
+/* line 269 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+optgroup {
+  font-weight: bold;
+}
+
+/* line 273 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+/* line 278 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+button,
+input {
+/* 1 */
+  overflow: visible;
+}
+
+/* line 283 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+/* line 288 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+button,
+select {
+/* 1 */
+  text-transform: none;
+}
+
+/* line 293 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+/* line 299 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+}
+
+/* line 306 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+/* line 310 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* line 318 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+/* line 322 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/* line 329 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+
+/* line 333 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 339 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+/* line 346 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/* line 355 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+
+/* line 359 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+textarea {
+  overflow: auto;
+}
+
+/* line 363 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+
+/* line 368 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/* line 374 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+/* line 378 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* line 383 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+/* line 388 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/* line 393 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+
+/* line 397 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 402 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+
+/* line 406 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/* line 411 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+/* line 416 : D:\Projects\HandlebarsTesting\source\css\imports\reset.styl */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+
+/* line 286 : D:\Projects\HandlebarsTesting\source\css\imports\variables.styl */
+
+/* line 1 : D:\Projects\HandlebarsTesting\node_modules\stylus\lib\functions\index.styl */
+
+/* line 1 : D:\Projects\HandlebarsTesting\source\css\imports\variables.styl */
+/*
+    Colours
+*/
+
+
+/* line 286 : D:\Projects\HandlebarsTesting\source\css\mixins.styl */
+
+/* line 1 : D:\Projects\HandlebarsTesting\node_modules\stylus\lib\functions\index.styl */
+
+/* line 1 : D:\Projects\HandlebarsTesting\source\css\mixins.styl */
+/* MIXINS */
+
+/* line 18 : D:\Projects\HandlebarsTesting\source\css\mixins.styl */
+/* USAGE
+  p
+    font-size(16)
+  */
