@@ -20,7 +20,7 @@ module.exports = function (grunt) {
         grunt.file.write('source/html/partials/fileList.handlebars', contents);
     });
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-stylus');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('assemble');
@@ -49,13 +49,12 @@ module.exports = function (grunt) {
                 }
             }
         },
-        stylus: {
+        sass: {
             dev: {
                 options: {
-                    linenos: true,
-                    compress: false
+                    sourcemap: 'auto'
                 },
-                files: { '<%= config.dest %>css/global.css': '<%= config.source %>css/**/*.styl' }
+                files: { '<%= config.dest %>css/global.css': '<%= config.source %>scss/**/*main.scss' }
             }
         },
         copy: {
@@ -111,8 +110,8 @@ module.exports = function (grunt) {
             },
             css: {
                 options: { livereload: true },
-                files: ['<%= config.source %>/css/**/*.styl'],
-                tasks: ['stylus:dev']
+                files: ['<%= config.source %>/scss/**/*.scss'],
+                tasks: ['sass:dev']
             },
             images: {
                 options: { livereload: true },
@@ -146,7 +145,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'listItems',
         'assemble',
-        'stylus:dev',
+        'sass:dev',
         'copy:js',
         'copy:files',
         'copy:fontsicons'
@@ -154,7 +153,7 @@ module.exports = function (grunt) {
     grunt.registerTask('dev', [
         'listItems',
         'assemble',
-        'stylus:dev',
+        'sass:dev',
         'copy:js',
         'copy:files',
         'copy:fontsicons'

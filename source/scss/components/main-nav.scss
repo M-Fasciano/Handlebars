@@ -1,0 +1,18 @@
+.c-main-nav {
+  position: relative;
+
+  ul.c-main-nav--links {
+    background: #f2f2f2;
+    display: none;
+    height: 100vh;
+    li {
+      a {
+        color: #333;
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+      }
+    }
+  }
+
+}

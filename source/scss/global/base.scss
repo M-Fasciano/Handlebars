@@ -1,0 +1,36 @@
+/* ==========================================================================
+   base styles
+   ========================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+    color: #333;
+}
+
+html {
+
+}
+
+body {
+  background: #f2f2f2;
+	font-family: "AvenirLT-Light",Arial,sans-serif;
+  font-weight: normal;
+  line-height: 1.4;
+	overflow-x: hidden;
+	text-align: center;
+}
+
+img {
+    vertical-align: middle;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}

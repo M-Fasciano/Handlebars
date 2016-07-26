@@ -1,0 +1,81 @@
+/* *** HAMBURGER MENU *** */
+
+.c-hamburger {
+  background: none;
+  display: block;
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 70px;
+  height: 70px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  &:focus {
+    outline: none;
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    top: 32px;
+    left: 18px;
+    right: 18px;
+    height: 6px;
+    background: #000;
+    border-radius: 2px;
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background-color: #000;
+      border-radius: 2px;
+      content: "";
+    }
+    &::before {
+      top: -10px;
+    }
+    &::after {
+      bottom: -10px;
+    }
+  }
+
+  &--htx span {
+    transition: background 0s 0.3s;
+    &::before,
+    &::after {
+      transition-duration: 0.3s, 0.3s;
+      transition-delay: 0.3s, 0s;
+    }
+    &::before {
+      transition-property: top, transform;
+    }
+    &::after {
+      transition-property: bottom, transform;
+    }
+  }
+}
+
+.c-hamburger--htx.is-active span {
+  background: none;
+  &::before {
+    top: 0;
+    transform: rotate(45deg);
+    transition-delay: 0s, 0.3s;
+  }
+  &::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition-delay: 0s, 0.3s;
+  }
+}

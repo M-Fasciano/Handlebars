@@ -1,0 +1,75 @@
+//mobile first media queries
+// to use: @include breakpoint(tiny/small/medium/large/huge);
+@mixin bp($point) {
+	  @if $point == tiny {
+	    @media only screen and (min-width: 320px) { @content; }
+	  }
+	  @if $point == small {
+	    @media only screen and (min-width: 480px) { @content; }
+	  }
+	  @if $point == medium {
+	    @media only screen and (min-width: 600px) { @content; }
+	  }
+	  @else if $point == tablets {
+	    @media only screen and (min-width: 768px) { @content; }
+	  }
+	  @else if $point == desktop {
+	    @media only screen and (min-width: 1024px) { @content; }
+	  }
+      @else if $point == large {
+		@media only screen and (min-width: 1440px) { @content; }
+   	  }
+	}
+
+//box-shadow
+//	to use: @include box-shadow(horiz vert blur spread color);
+@mixin box-shadow($args...){
+  -webkit-box-shadow: $args;
+  -moz-box-shadow: $args;
+  box-shadow: $args;
+}
+
+//transition
+//	to use: @include transition(property time effect); (can take multiple arguments e.g. color 0.3s ease, border-color 0.3s ease)
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+//box-sizing
+@mixin box-sizing() {
+	-webkit-box-sizing: border-box; /* Safari, Android, other older WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/Chrome/IE 8+ */
+}
+
+//transform
+// transform can be emulated in IE < 9 using Microsoft's "zoom" extension
+@mixin transform($args...) {
+    transform:$args;
+    -ms-transform:$args; /* IE 9 */
+    -moz-transform:$args; /* Firefox lt16 */
+    -webkit-transform:$args; /* Safari, Chrome, Opera */
+    -o-transform:$args; /* Opera lt12.1 */
+}
+
+//desaturate
+@mixin filter($args...) {
+    filter: $args;
+    -webkit-filter: $args;
+    -moz-filter: $args;
+    -ms-filter: $args;
+    -o-filter: $args;
+}
+
+//gradients
+@mixin gradient($color1:#fff, $color2:#000) {
+	background-color: $color1;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($color1), to($color2)); /* Chrome, Safari 4+ */
+	background-image: -webkit-linear-gradient(top, $color1, $color2); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+	background-image:    -moz-linear-gradient(top, $color1, $color2); /* Firefox 3.6-15 */
+	background-image:      -o-linear-gradient(top, $color1, $color2); /* Opera 11.10-12.00 */
+	background-image:         linear-gradient(to bottom, $color1, $color2); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
