@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include font-size(1.6);
+  margin: 0;
+}
+
+h1 { @include h1 }
+h2 { @include h2 }
+h3 { @include h3 }
+h4 { @include h4 }
+h5 { @include h5 }
+h6 { @include h6 }
+
+img { display: block }
+
+.wrapper {
+  background: #f5f5f5;
+  max-width: 960px;
+  margin: 0 auto;
+
+  @include bp(desktop_wide) {
+    background: purple;
+  }
+  @include bp(desktop) {
+    background: lime;
+  }
+  @include bp(tablet_wide) {
+    background: violet;
+  }
+  @include bp(tablet) {
+    background: pink;
+  }
+  @include bp(tablet_small) {
+    background: orange;
+  }
+  @include bp(phablet) {
+    background: yellow;
+  }
+  @include bp(phone_wide) {
+    background: green;
+  }
+  @include bp(phone) {
+    background: red;
+  }
+
+  .inner {
+    padding: 20px;
+  }
+}

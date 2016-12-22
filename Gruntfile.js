@@ -20,9 +20,11 @@ module.exports = function (grunt) {
         grunt.file.write('source/html/partials/fileList.handlebars', contents);
     });
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-stylus');
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-browserify');
+    grunt.loadNpmTasks('browserify-handlebars');
     grunt.loadNpmTasks('assemble');
     grunt.initConfig({
         config: {
@@ -49,28 +51,26 @@ module.exports = function (grunt) {
                 }
             }
         },
-        stylus: {
-            dev: {
-                options: {
-                    linenos: true,
-                    compress: false
-                },
-                files: { '<%= config.dest %>css/global.css': '<%= config.source %>css/**/*.styl' }
+        sass: {
+          dev: {
+            files: {
+                '<%= config.dest %>css/main.css': '<%= config.source %>scss/main.scss'
             }
+          }
         },
         copy: {
             files: {
                 files: [
                     {
-                        src: ['*.*'],
-                        dest: '<%= config.dest %>images/',
-                        cwd: '<%= config.source %>images/',
+                        src: ['**/*.*'],
+                        dest: '<%= config.dest %>/images/',
+                        cwd: '<%= config.source %>/images/',
                         expand: true
                     },
                     {
-                        src: ['*.*'],
-                        dest: '<%= config.dest %>css/images/',
-                        cwd: '<%= config.source %>css/images/',
+                        src: ['**/*.*'],
+                        dest: '<%= config.dest %>webfonts/',
+                        cwd: '<%= config.source %>webfonts/',
                         expand: true
                     }
                 ]
@@ -82,6 +82,16 @@ module.exports = function (grunt) {
                         cwd: '<%= config.source %>js/',
                         expand: true
                     }]
+            },
+            data: {
+                files: [
+                  {
+                    src: ['**/*.json'],
+                    dest: '<%= config.dest %>data/',
+                    cwd: '<%= config.source %>html/data/',
+                    expand: true
+                  }
+              ]
             },
             fontsicons: {
                 files: [{
@@ -96,7 +106,7 @@ module.exports = function (grunt) {
             scripts: {
                 options: { livereload: true },
                 files: ['<%= config.source %>js/**/*.js'],
-                tasks: ['copy:js']
+                tasks: ['browserify:dev']
             },
             html: {
                 options: { livereload: true },
@@ -106,13 +116,15 @@ module.exports = function (grunt) {
                 ],
                 tasks: [
                     'listItems',
-                    'assemble'
+                    'assemble',
+                    'copy:data',
+                    'browserify:dev'
                 ]
             },
             css: {
                 options: { livereload: true },
-                files: ['<%= config.source %>/css/**/*.styl'],
-                tasks: ['stylus:dev']
+                files: ['<%= config.source %>/scss/**/*.scss'],
+                tasks: ['sass']
             },
             images: {
                 options: { livereload: true },
@@ -123,6 +135,11 @@ module.exports = function (grunt) {
                 options: { livereload: true },
                 files: ['<%= config.source %>css/**/*.{svg,eot,woff,ttf,woff2,otf}'],
                 tasks: ['copy:fontsicons']
+            },
+            data: {
+                options: { livereload: true },
+                files: ['<%= config.source %>html/more-data/**/*.json'],
+                tasks: ['copy:data']
             }
         },
         assemble: {
@@ -141,22 +158,33 @@ module.exports = function (grunt) {
                         ext: '.html'
                     }]
             }
+        },
+        browserify: {
+          dev: {
+            src: ['<%= config.source %>js/**/*main.js'],
+            dest: '<%= config.dest %>js/scripts.js',
+            options: {
+              transform: ['browserify-handlebars']
+            }
+          }
         }
     });
     grunt.registerTask('build', [
         'listItems',
         'assemble',
-        'stylus:dev',
-        'copy:js',
+        'sass:dev',
+        'browserify:dev',
         'copy:files',
+        'copy:data',
         'copy:fontsicons'
     ]);
     grunt.registerTask('dev', [
         'listItems',
         'assemble',
-        'stylus:dev',
-        'copy:js',
+        'sass:dev',
+        'browserify:dev',
         'copy:files',
+        'copy:data',
         'copy:fontsicons'
     ]);
     grunt.registerTask('default', [

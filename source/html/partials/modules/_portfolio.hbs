@@ -1,0 +1,10 @@
+
+<div class="grid">
+  {{#each images}}
+    <!-- width of .grid-sizer used for columnWidth -->
+    <div class="grid-sizer"></div>
+    <div class="grid-item {{category}}">
+      <img src="{{image}}" alt="{{alt}}" />
+    </div>
+  {{/each}}
+</div>

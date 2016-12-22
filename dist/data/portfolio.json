@@ -1,0 +1,59 @@
+{
+  "moduleOne": {
+    "images": [
+      {
+        "category": "dishes",
+        "image": "https://placeimg.com/640/480/any",
+        "alt": "dishes 1"
+      },
+      {
+        "category": "dishes",
+        "image": "https://placeimg.com/640/480/any",
+        "alt": "dishes 2"
+      },
+      {
+        "category": "dishes",
+        "image": "https://placeimg.com/640/480/any",
+        "alt": "dishes 3"
+      }
+    ]
+  },
+  "moduleTwo": {
+    "images": [
+      {
+        "category": "crop",
+        "image": "https://placeimg.com/640/480/any",
+        "alt": "crop 1"
+      },
+      {
+        "category": "crop",
+        "image": "https://placeimg.com/640/480/any",
+        "alt": "crop 2"
+      },
+      {
+        "category": "crop",
+        "image": "https://placeimg.com/640/480/any",
+        "alt": "crop 3"
+      }
+    ]
+  },
+  "moduleThree": {
+    "images": [
+      {
+        "category": "streetfood",
+        "image": "https://placeimg.com/640/480/any",
+        "alt": "streetfood 1"
+      },
+      {
+        "category": "streetfood",
+        "image": "https://placeimg.com/640/480/any",
+        "alt": "streetfood 2"
+      },
+      {
+        "category": "streetfood",
+        "image": "https://placeimg.com/640/480/any",
+        "alt": "streetfood 3"
+      }
+    ]
+  }
+}
